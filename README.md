@@ -1,8 +1,9 @@
 # Markdown Editor MCP Server
 
+[![Tests](https://github.com/KazKozDev/markdown-editor-mcp-server/actions/workflows/tests.yml/badge.svg)](https://github.com/KazKozDev/markdown-editor-mcp-server/actions/workflows/tests.yml)
+[![PyPI version](https://badge.fury.io/py/markdown-editor-mcp-server.svg)](https://badge.fury.io/py/markdown-editor-mcp-server)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 [![MCP 2025](https://img.shields.io/badge/MCP-2025%20Standard-green.svg)](IMPROVEMENTS_2025.md)
 
 MCP server providing tools for **structured, semantic editing** of Markdown files. Unlike standard text editors, this server understands the logical structure of your documents.
