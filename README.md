@@ -8,14 +8,20 @@
 
 MCP server providing tools for **structured, semantic editing** of Markdown files. Unlike standard text editors, this server understands the logical structure of your documents.
 
-**✨ Fully compliant with MCP 2025 Standard** - includes Tool Search, Examples, Output Schemas, and Dynamic Capabilities.
+**Fully compliant with MCP 2025 Standard** - includes Tool Search, Examples, Output Schemas, and Dynamic Capabilities.
 
 ## Installation
+
+### From PyPI (recommended)
+
+```bash
+pip install markdown-editor-mcp-server
+```
 
 ### From source
 
 ```bash
-git clone https://github.com/your-repo/markdown-editor-mcp-server.git
+git clone https://github.com/KazKozDev/markdown-editor-mcp-server.git
 cd markdown-editor-mcp-server
 pip install -e .
 ```
@@ -297,8 +303,6 @@ This server implements all 2025 MCP improvements:
 - **Tool Use Examples** - Input parameter examples help LLMs use tools correctly
 - **Output Schemas** - Structured output definitions for better client integration
 - **Dynamic Capabilities** - Support for `tools/list_changed` notifications
-
-See [IMPROVEMENTS_2025.md](IMPROVEMENTS_2025.md) for details.
 
 ---
 
