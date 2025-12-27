@@ -1,8 +1,13 @@
 import logging
 import os
-import fcntl
 import tempfile
 from typing import Dict, Any, List, Optional
+
+try:
+    import fcntl
+except ImportError:
+    fcntl = None  # Windows support
+
 from ..core.document import Document
 from ..core.path_utils import resolve_path
 
@@ -29,15 +34,17 @@ class FileLock:
     def __enter__(self):
         # Create lock file if it doesn't exist
         self.lock_file = open(self.lock_path, "w")
-        if self.exclusive:
-            fcntl.flock(self.lock_file.fileno(), fcntl.LOCK_EX)
-        else:
-            fcntl.flock(self.lock_file.fileno(), fcntl.LOCK_SH)
+        if fcntl:
+            if self.exclusive:
+                fcntl.flock(self.lock_file.fileno(), fcntl.LOCK_EX)
+            else:
+                fcntl.flock(self.lock_file.fileno(), fcntl.LOCK_SH)
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         if self.lock_file:
-            fcntl.flock(self.lock_file.fileno(), fcntl.LOCK_UN)
+            if fcntl:
+                fcntl.flock(self.lock_file.fileno(), fcntl.LOCK_UN)
             self.lock_file.close()
             # Clean up lock file
             try:
