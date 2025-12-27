@@ -7,7 +7,7 @@ Configuration loader with two-level system:
 import os
 import yaml
 from pathlib import Path
-from typing import Any, Optional
+from typing import Optional
 from dataclasses import dataclass, field
 from copy import deepcopy
 

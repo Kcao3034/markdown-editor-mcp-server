@@ -5,11 +5,10 @@ Document engine - applying operations, transactions, rollbacks.
 import uuid
 import copy
 from typing import Optional, List
-from datetime import datetime
 
 from .models import (
-    DocumentState, Element, Operation, OperationType,
-    Transaction, Journal, OperationResult, ElementType
+    DocumentState, Operation, OperationType,
+    Transaction, Journal, OperationResult
 )
 from .parser import MarkdownParser, find_element_by_path, get_all_paths
 

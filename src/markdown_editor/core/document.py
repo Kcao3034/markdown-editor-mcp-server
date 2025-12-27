@@ -177,10 +177,10 @@ class MarkdownParser:
             # Code block
             if line.startswith('```'):
                 code_lines = [line]
-                lang = line[3:].strip()
+                _ = line[3:].strip()  # lang - not used but preserved for future
                 i += 1
                 pos += len(line) + 1
-                code_start = pos
+                _ = pos  # code_start - not used but preserved for future
                 
                 while i < len(lines) and not lines[i].startswith('```'):
                     code_lines.append(lines[i])

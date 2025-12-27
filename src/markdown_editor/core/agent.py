@@ -4,11 +4,11 @@ Connects LLM with DocumentEngine tools.
 """
 
 import json
-from typing import Optional, List, Dict, Any, Callable
+from typing import Optional, List, Dict, Callable
 from dataclasses import dataclass
 
 from .engine import DocumentEngine
-from .llm_client import LLMClient, Message, build_tools_schema, LLMConfig
+from .llm_client import LLMClient, Message, build_tools_schema
 from ..config.loader import Config
 
 

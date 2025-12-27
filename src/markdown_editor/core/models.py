@@ -4,7 +4,7 @@ Data models for document processing.
 
 from dataclasses import dataclass, field
 from datetime import datetime
-from typing import Optional, List, Dict, Any
+from typing import Optional, List
 from enum import Enum
 import json
 

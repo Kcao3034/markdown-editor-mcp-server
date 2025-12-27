@@ -1,7 +1,6 @@
 import asyncio
 import logging
-import json
-from typing import Any, Optional, List, Dict
+from typing import Any
 
 from mcp.server import Server, NotificationOptions
 from mcp.types import (

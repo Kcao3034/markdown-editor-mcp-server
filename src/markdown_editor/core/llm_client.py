@@ -2,9 +2,8 @@
 Client for working with LLM (Ollama by default).
 """
 
-import json
 import httpx
-from typing import List, Dict, Any, Optional
+from typing import List, Optional
 from dataclasses import dataclass
 
 

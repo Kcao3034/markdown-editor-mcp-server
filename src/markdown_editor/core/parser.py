@@ -3,7 +3,7 @@ Markdown parser to structural tree with addressing.
 """
 
 import re
-from typing import List, Optional, Tuple
+from typing import List, Optional
 from .models import Element, ElementType
 
 
