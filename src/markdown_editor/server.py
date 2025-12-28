@@ -1,4 +1,5 @@
 import asyncio
+import json
 import logging
 from typing import Any
 
@@ -513,9 +514,10 @@ async def call_tool(name: str, arguments: dict) -> Any:
         if name == "list_directory":
             path = arguments.get("path", ".")
             items = await list_directory(path)
+            result = {"items": items}
             return {
-                "content": [TextContent(type="text", text=str(items))],
-                "structuredContent": {"items": items},
+                "content": [TextContent(type="text", text=json.dumps(result, ensure_ascii=False, indent=2))],
+                "structuredContent": result,
                 "isError": items is None,
             }
 
@@ -553,24 +555,26 @@ async def call_tool(name: str, arguments: dict) -> Any:
 
         if name == "get_document_structure":
             res = await get_document_structure(file_path, arguments.get("depth", 2))
+            result = {"structure": res}
             return {
-                "content": [TextContent(type="text", text="Structure extracted")],
-                "structuredContent": {"structure": res},
+                "content": [TextContent(type="text", text=json.dumps(result, ensure_ascii=False, indent=2))],
+                "structuredContent": result,
                 "isError": False,
             }
 
         elif name == "search_text":
             res = await search_in_document(file_path, arguments["query"])
+            result = {"results": res, "count": len(res)}
             return {
-                "content": [TextContent(type="text", text=f"Found {len(res)} matches")],
-                "structuredContent": {"results": res},
+                "content": [TextContent(type="text", text=json.dumps(result, ensure_ascii=False, indent=2))],
+                "structuredContent": result,
                 "isError": False,
             }
 
         elif name == "get_context":
             res = await get_element_context(file_path, arguments["path"])
             return {
-                "content": [TextContent(type="text", text="Context extracted")],
+                "content": [TextContent(type="text", text=json.dumps(res, ensure_ascii=False, indent=2))],
                 "structuredContent": res,
                 "isError": "error" in res,
             }
@@ -578,7 +582,7 @@ async def call_tool(name: str, arguments: dict) -> Any:
         elif name == "read_element":
             res = await read_element(file_path, arguments["path"])
             return {
-                "content": [TextContent(type="text", text="Element read")],
+                "content": [TextContent(type="text", text=json.dumps(res, ensure_ascii=False, indent=2))],
                 "structuredContent": res,
                 "isError": "error" in res,
             }
