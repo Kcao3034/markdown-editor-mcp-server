@@ -45,16 +45,20 @@ def cleanup_file(temp_md_file):
 
 
 class TestSerializationFix:
-    """Tests for the serialization bug fix."""
+    """Tests for the serialization bug fix.
+    
+    Note: call_tool now returns CallToolResult objects (not dicts) after v0.1.7 fix.
+    """
 
     @pytest.mark.asyncio
     async def test_list_directory_returns_json(self):
         """list_directory should return JSON with items array, not 'N files found'."""
         result = await call_tool("list_directory", {"path": "."})
         
-        assert "content" in result
-        assert len(result["content"]) > 0
-        text = result["content"][0].text
+        # Result is now CallToolResult object with .content attribute
+        assert result.content is not None
+        assert len(result.content) > 0
+        text = result.content[0].text
         
         # Should be valid JSON, not a static message
         parsed = json.loads(text)
@@ -68,8 +72,9 @@ class TestSerializationFix:
             "get_document_structure", {"file_path": cleanup_file}
         )
         
-        assert "content" in result
-        text = result["content"][0].text
+        # Result is now CallToolResult object with .content attribute
+        assert result.content is not None
+        text = result.content[0].text
         
         # Should NOT be just "Structure extracted"
         assert text != "Structure extracted"
@@ -86,8 +91,9 @@ class TestSerializationFix:
             {"file_path": cleanup_file, "query": "searchable"}
         )
         
-        assert "content" in result
-        text = result["content"][0].text
+        # Result is now CallToolResult object with .content attribute
+        assert result.content is not None
+        text = result.content[0].text
         
         # Should NOT be just "Found X matches"
         assert not text.startswith("Found")
@@ -105,8 +111,9 @@ class TestSerializationFix:
             {"file_path": cleanup_file, "path": "Test Document"}
         )
         
-        assert "content" in result
-        text = result["content"][0].text
+        # Result is now CallToolResult object with .content attribute
+        assert result.content is not None
+        text = result.content[0].text
         
         # Should NOT be just "Context extracted"
         assert text != "Context extracted"
@@ -124,8 +131,9 @@ class TestSerializationFix:
             {"file_path": cleanup_file, "path": "Test Document"}
         )
         
-        assert "content" in result
-        text = result["content"][0].text
+        # Result is now CallToolResult object with .content attribute
+        assert result.content is not None
+        text = result.content[0].text
         
         # Should NOT be just "Element read"
         assert text != "Element read"
