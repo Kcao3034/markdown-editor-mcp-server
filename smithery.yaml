@@ -13,8 +13,11 @@ project:
 run:
   command: python3
   args: [-m, markdown_editor.server]
+  env:
+    PYTHONPATH: src
 
 # Installation instructions for Smithery CLI
 install:
   pip:
-    - .
+    - mcp>=0.9.0
+    - pyyaml>=6.0.1
