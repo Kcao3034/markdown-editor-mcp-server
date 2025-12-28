@@ -1,0 +1,12 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+.pytest_cache
+.ruff_cache
+tests
+.zenflow
+.zencoder
+.github
+.claude
+.DS_Store
